@@ -1,0 +1,33 @@
+glue = data ko integrate karte hai ,data ko combind karte hai    multiple sourseska data ek jagah leke aate hai  ise ETL process kahte hai
+
+
+ETL = extract transform load
+
+
+In the context of AWS, ETL stands for Extract, Transform, Load, a process used to move, clean, and transform data from multiple sources into a single, unified format for analysis and reporting. AWS offers various tools and services to facilitate this process, including AWS Glue, a serverless ETL service. 
+
+Here's a more detailed breakdown:
+
+Extract:
+This phase involves gathering data from various sources, such as databases, cloud storage, or other systems.
+ 
+Transform:
+Here, the extracted data is cleaned, validated, and formatted to meet specific requirements. This can involve tasks like data cleaning, deduplication, and data type conversions.
+ 
+Load:
+Finally, the transformed data is loaded into a target destination, which could be a data warehouse, data lake, or other system for analysis. 
+
+
+
+AWS Services for ETL:
+AWS Glue:
+A fully managed, serverless ETL service that allows users to prepare and load data for analytics. It uses the Apache Spark engine to distribute big data workloads, enabling faster transformations. 
+Amazon S3:
+Amazon Simple Storage Service, a cloud object storage service, can be used as a source or destination for data in ETL pipelines. 
+Amazon Redshift:
+A fast, fully managed, petabyte-scale data warehouse service that can be used as a target for loaded data. 
+AWS Lambda:
+A serverless compute service that can be used to run code for data transformations and loading. 
+AWS Data Lake:
+A centralized repository for storing large amounts of data in its raw format, which can be used as a source or destination for ETL processes. 
+
