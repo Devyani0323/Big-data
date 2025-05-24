@@ -1,0 +1,37 @@
+CREATE OR REPLACE STAGE myjson_STAGE
+  URL = 's3://mydevyani001/'
+  CREDENTIALS = (
+    AWS_KEY_ID = 'access key '
+    AWS_SECRET_KEY = 'secreat key'
+  );
+  ls @myjson_STAGE;
+drop table json_table;
+  create or replace table json_table(myjson variant);
+
+  copy into json_table 
+  from @myjson_STAGE/file1.json
+   FILE_FORMAT = (TYPE = 'JSON');
+
+   select * from json_table;
+
+select myjson:"hobbies"::string as age from json_table;
+
+CREATE FILE FORMAT my_json_format
+  TYPE = 'JSON';
+
+  CREATE OR REPLACE STAGE my_s3_stage
+  URL = 's3://mydevyani001/'
+  CREDENTIALS = (
+    AWS_KEY_ID = 'access key',
+    AWS_SECRET_KEY = 'secreat key'
+  )
+  FILE_FORMAT = my_json_format;
+
+  
+
+COPY INTO @my_s3_stage/snowflake_to_s3table_data.json
+FROM (
+  SELECT OBJECT_CONSTRUCT(*) FROM json_table
+)
+FILE_FORMAT = (FORMAT_NAME = my_json_format)
+OVERWRITE = TRUE;
