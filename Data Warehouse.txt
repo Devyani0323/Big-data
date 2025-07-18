@@ -1,0 +1,45 @@
+Q.1  What is a Data Warehouse?
+ans  A Data Warehouse is a centralized system used to store large amounts of data collected from different sources like      	databases, CRM, ERP, flat files, etc., mainly for analysis and reporting, not for daily operations.
+
+========================================================================================================================
+
+Q.2  Why do we need a Data Warehouse?
+ans   To analyze historical data
+
+      To create reports and dashboards
+
+      To combine data from multiple systems in one place
+
+      To ensure faster performance during analysis
+
+=========================================================================================================================
+
+Q,3   How does a Data Warehouse work? (Architecture)
+      
+      Source Systems – These can be databases, files, APIs, etc.
+
+      ETL Process – E= Extract data from sources
+
+                    T= Transform (clean, filter, reformat)
+
+                    L= Load into the data warehouse
+
+     Data Warehouse Storage – Organized data is stored in tables (schemas like star/snowflake)
+
+     BI Tools – Tools like Power BI, Tableau are used to visualize and report the data
+
+========================================================================================================================
+
+Q.4 Key Characteristics of data warehouse??
+ans Subject-Oriented – Data is organized by topics like sales, marketing, finance
+
+     Time-Variant – Stores data over a long time with time stamps
+
+     Non-Volatile – Once data is stored, it is not changed or deleted frequently
+
+     Integrated – Combines data from different sources into one consistent format
+
+====================================================================================================================
+
+
+
